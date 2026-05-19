@@ -145,9 +145,7 @@ export default function Index() {
         <div className="absolute inset-0 bg-stone-950/65" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 w-full pt-24 pb-20">
           <div className="max-w-2xl">
-            <p className="font-golos text-sm font-semibold tracking-widest uppercase mb-4" style={{ color: "#F5C518" }}>
-              Независимая товароведческая экспертиза
-            </p>
+            <p className="font-golos text-sm font-semibold tracking-widest uppercase mb-4" style={{ color: "#F5C518" }}>НЕЗАВИСИМАЯ ТОВАРОВЕДЧЕСКАЯ ЭКСПЕРТИЗА В НИЖНЕМ ТАГИЛЕ</p>
             <h1 className="font-golos text-5xl font-light text-white leading-tight mb-6">
               Техника сломалась —<br />
               <span className="font-semibold text-5xl" style={{ color: "#F5C518" }}>верните деньги</span>
