@@ -28,15 +28,15 @@ const steps = [
 
 const prices = [
   {
-    name: "Заключение",
-    price: "от 3 500 ₽",
-    desc: "Для маркетплейсов",
-    features: ["Диагностика техники", "Официальное заключение", "Срок 1–2 рабочих дня", "Подходит для Ozon и WB"],
+    name: "Консультация юриста",
+    price: "от 2 500 ₽",
+    desc: "Разберём вашу ситуацию",
+    features: ["Анализ документов и чеков", "Оценка шансов на возврат", "Инструкция по шагам", "Онлайн или в офисе"],
     highlight: false,
   },
   {
-    name: "Возврат под ключ",
-    price: "от 8 000 ₽",
+    name: "Досудебная экспертиза",
+    price: "от 9 900 ₽",
     desc: "Самый популярный",
     features: ["Диагностика техники", "Заключение товароведа", "Помощь в подаче заявки", "Сопровождение до возврата денег", "Срок 3–5 рабочих дней"],
     highlight: true,
@@ -140,9 +140,9 @@ export default function Index() {
             <p className="font-golos text-sm font-semibold tracking-widest uppercase mb-4" style={{ color: "#F5C518" }}>
               Независимая товароведческая экспертиза
             </p>
-            <h1 className="font-golos md:text-4xl font-light text-white leading-tight mb-6 text-4xl">
+            <h1 className="font-golos text-5xl font-light text-white leading-tight mb-6">
               Техника сломалась —<br />
-              <span className="font-semibold md:text-7xl text-4xl" style={{ color: "#F5C518" }}>верните деньги</span>
+              <span className="font-semibold text-5xl" style={{ color: "#F5C518" }}>верните деньги</span>
             </h1>
             <p className="text-stone-300 text-lg leading-relaxed mb-10 max-w-lg">Судебные экспертизы. 
 Официальное заключение для возврата бракованного телефона, ноутбука или бытовой техники на Ozon и Wildberries. Оценка стоимости.</p>
