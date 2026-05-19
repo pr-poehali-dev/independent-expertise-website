@@ -144,9 +144,8 @@ export default function Index() {
               Техника сломалась —<br />
               <span className="font-semibold md:text-7xl text-4xl" style={{ color: "#F5C518" }}>верните деньги</span>
             </h1>
-            <p className="text-stone-300 text-lg leading-relaxed mb-10 max-w-lg">
-              Официальное заключение для возврата бракованного телефона, ноутбука или бытовой техники на Ozon и Wildberries. Без отказов.
-            </p>
+            <p className="text-stone-300 text-lg leading-relaxed mb-10 max-w-lg">Судебные экспертизы. 
+Официальное заключение для возврата бракованного телефона, ноутбука или бытовой техники на Ozon и Wildberries. Оценка стоимости.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => scrollTo("#contacts")}
