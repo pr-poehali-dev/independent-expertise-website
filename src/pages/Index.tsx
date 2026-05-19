@@ -140,7 +140,7 @@ export default function Index() {
             <p className="font-golos text-sm font-semibold tracking-widest uppercase mb-4" style={{ color: "#F5C518" }}>
               Независимая товароведческая экспертиза
             </p>
-            <h1 className="font-golos md:text-7xl font-light text-white leading-tight mb-6 text-5xl">
+            <h1 className="font-golos md:text-7xl font-light text-white leading-tight mb-6 text-4xl">
               Техника сломалась —<br />
               <span className="font-semibold text-4xl" style={{ color: "#F5C518" }}>верните деньги</span>
             </h1>
