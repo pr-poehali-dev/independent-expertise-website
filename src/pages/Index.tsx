@@ -283,9 +283,7 @@ export default function Index() {
                 Получите<br />консультацию
               </h2>
               <div className="w-16 h-px mb-8" style={{ background: "#F5C518" }} />
-              <p className="text-stone-400 text-base leading-relaxed mb-10">
-                Оставьте заявку — ответим в течение 2 часов. Первая консультация бесплатна. Принимаем технику лично и по всей России через курьера.
-              </p>
+              <p className="text-stone-400 text-base leading-relaxed mb-10">Оставьте заявку — ответим в течение 2 часов. Первая консультация бесплатна</p>
               <div className="space-y-5">
                 {[
                   { icon: "Phone", label: "+7 912-299-70-00" },
