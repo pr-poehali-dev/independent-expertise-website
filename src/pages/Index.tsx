@@ -140,9 +140,9 @@ export default function Index() {
             <p className="font-golos text-sm font-semibold tracking-widest uppercase mb-4" style={{ color: "#F5C518" }}>
               Независимая товароведческая экспертиза
             </p>
-            <h1 className="font-golos text-5xl md:text-7xl font-light text-white leading-tight mb-6">
+            <h1 className="font-golos md:text-4xl font-light text-white leading-tight mb-6 text-4xl">
               Техника сломалась —<br />
-              <span className="font-semibold text-5xl md:text-7xl" style={{ color: "#F5C518" }}>верните деньги</span>
+              <span className="font-semibold md:text-7xl text-4xl" style={{ color: "#F5C518" }}>верните деньги</span>
             </h1>
             <p className="text-stone-300 text-lg leading-relaxed mb-10 max-w-lg">
               Официальное заключение для возврата бракованного телефона, ноутбука или бытовой техники на Ozon и Wildberries. Без отказов.
