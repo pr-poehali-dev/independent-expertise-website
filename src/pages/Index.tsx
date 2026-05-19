@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import Icon from "@/components/ui/icon";
 
+const SEND_URL = "https://functions.poehali.dev/24927a74-8007-4a64-9304-0885c2072324";
+
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/4bae9987-38e7-476d-b7ba-0a86875d56c3/files/1f3c8d88-a3c0-43f8-aa0c-1040344f33a4.jpg";
 
 const navLinks = [
@@ -54,6 +56,18 @@ const prices = [
 export default function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [form, setForm] = useState({ name: '', phone: '', service: '', description: '' });
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  const handleSubmit = async () => {
+    if (!form.name || !form.phone) return;
+    setSending(true);
+    await fetch(SEND_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(form) });
+    setSending(false);
+    setSent(true);
+    setForm({ name: '', phone: '', service: '', description: '' });
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -277,7 +291,7 @@ export default function Index() {
               <div className="space-y-5">
                 {[
                   { icon: "Phone", label: "+7 912-299-70-00" },
-                  { icon: "Mail", label: "info@expertiza.ru" },
+                  { icon: "Mail", label: "diegovirt@yandex.ru" },
                   { icon: "MapPin", label: "Нижний Тагил, ул. Орджоникидзе, 31" },
                   { icon: "Clock", label: "Пн–Пт: 10:00–19:00" },
                 ].map((c) => (
@@ -293,24 +307,41 @@ export default function Index() {
 
             <div className="p-8" style={{ background: "#2A2A2A" }}>
               <h3 className="font-golos text-2xl font-semibold mb-6">Заявка на заключение</h3>
+              {sent ? (
+                <div className="text-center py-10">
+                  <Icon name="CheckCircle" size={48} style={{ color: "#F5C518", margin: "0 auto 16px" }} />
+                  <p className="text-white text-lg font-semibold mb-2">Заявка отправлена!</p>
+                  <p className="text-stone-400 text-sm">Перезвоним в течение 2 часов</p>
+                </div>
+              ) : (
               <div className="space-y-4">
-                {[
-                  { label: "Имя", type: "text", placeholder: "Иван Иванов" },
-                  { label: "Телефон", type: "tel", placeholder: "+7 (___) ___-__-__" },
-                ].map((f) => (
-                  <div key={f.label}>
-                    <label className="text-xs text-stone-400 tracking-widest uppercase block mb-2">{f.label}</label>
-                    <input
-                      type={f.type}
-                      placeholder={f.placeholder}
-                      className="w-full border text-white placeholder-stone-500 px-4 py-3 text-sm focus:outline-none transition-colors"
-                      style={{ background: "#3A3A3A", borderColor: "#5A5A5A" }}
-                    />
-                  </div>
-                ))}
+                <div>
+                  <label className="text-xs text-stone-400 tracking-widest uppercase block mb-2">Имя</label>
+                  <input
+                    type="text"
+                    placeholder="Иван Иванов"
+                    value={form.name}
+                    onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
+                    className="w-full border text-white placeholder-stone-500 px-4 py-3 text-sm focus:outline-none transition-colors"
+                    style={{ background: "#3A3A3A", borderColor: "#5A5A5A" }}
+                  />
+                </div>
+                <div>
+                  <label className="text-xs text-stone-400 tracking-widest uppercase block mb-2">Телефон</label>
+                  <input
+                    type="tel"
+                    placeholder="+7 (___) ___-__-__"
+                    value={form.phone}
+                    onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
+                    className="w-full border text-white placeholder-stone-500 px-4 py-3 text-sm focus:outline-none transition-colors"
+                    style={{ background: "#3A3A3A", borderColor: "#5A5A5A" }}
+                  />
+                </div>
                 <div>
                   <label className="text-xs text-stone-400 tracking-widest uppercase block mb-2">Вид экспертизы</label>
                   <select
+                    value={form.service}
+                    onChange={e => setForm(f => ({ ...f, service: e.target.value }))}
                     className="w-full border text-stone-300 px-4 py-3 text-sm focus:outline-none transition-colors appearance-none"
                     style={{ background: "#3A3A3A", borderColor: "#5A5A5A" }}
                   >
@@ -327,20 +358,25 @@ export default function Index() {
                   <textarea
                     placeholder="Опишите проблему: что сломалось, где покупали, маркетплейс..."
                     rows={3}
+                    value={form.description}
+                    onChange={e => setForm(f => ({ ...f, description: e.target.value }))}
                     className="w-full border text-white placeholder-stone-500 px-4 py-3 text-sm focus:outline-none transition-colors resize-none"
                     style={{ background: "#3A3A3A", borderColor: "#5A5A5A" }}
                   />
                 </div>
                 <button
-                  className="w-full font-semibold py-4 text-sm tracking-wide transition-colors mt-2"
+                  onClick={handleSubmit}
+                  disabled={sending || !form.name || !form.phone}
+                  className="w-full font-semibold py-4 text-sm tracking-wide transition-colors mt-2 disabled:opacity-50"
                   style={{ background: "#F5C518", color: "#0E0E0E" }}
                 >
-                  Отправить заявку
+                  {sending ? "Отправляем..." : "Отправить заявку"}
                 </button>
                 <p className="text-xs text-stone-600 text-center leading-relaxed">
                   Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных
                 </p>
               </div>
+              )}
             </div>
           </div>
         </div>
