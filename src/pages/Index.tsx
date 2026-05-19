@@ -11,50 +11,50 @@ const navLinks = [
 ];
 
 const services = [
-  { icon: "Building2", title: "Строительная экспертиза", desc: "Оценка качества строительных работ, выявление дефектов и нарушений нормативов." },
-  { icon: "Scale", title: "Независимая оценка", desc: "Объективная оценка ущерба, рыночной стоимости имущества и нематериальных активов." },
-  { icon: "FileText", title: "Техническая экспертиза", desc: "Исследование технических устройств, оборудования и сложных механизмов." },
-  { icon: "Package", title: "Товарная экспертиза", desc: "Определение качества, подлинности и соответствия товаров стандартам." },
-  { icon: "Gavel", title: "Судебная экспертиза", desc: "Подготовка заключений для судебных разбирательств и досудебного урегулирования." },
-  { icon: "Home", title: "Оценка недвижимости", desc: "Определение рыночной и кадастровой стоимости жилой и коммерческой недвижимости." },
+  { icon: "Smartphone", title: "Экспертиза телефонов", desc: "Смартфоны, планшеты, умные часы — определяем производственный брак и заводские дефекты." },
+  { icon: "Monitor", title: "Экспертиза компьютеров", desc: "Ноутбуки, ПК, мониторы — выявляем неисправности, возникшие не по вине покупателя." },
+  { icon: "Tv", title: "Бытовая техника", desc: "Телевизоры, холодильники, стиральные машины, пылесосы и другая техника." },
+  { icon: "RotateCcw", title: "Возврат на Ozon", desc: "Помогаем вернуть бракованный товар продавцу на маркетплейсе Ozon с официальным заключением." },
+  { icon: "ShoppingBag", title: "Возврат на Wildberries", desc: "Оформляем экспертное заключение для успешного возврата через Wildberries и получения компенсации." },
+  { icon: "Gavel", title: "Судебная защита", desc: "Готовим заключения для судебных разбирательств с продавцами и маркетплейсами." },
 ];
 
 const steps = [
-  { num: "01", title: "Заявка", desc: "Вы оставляете заявку — мы связываемся в течение 2 часов и уточняем детали задачи." },
-  { num: "02", title: "Выезд и исследование", desc: "Эксперт выезжает на объект или принимает материалы, проводит детальное исследование." },
-  { num: "03", title: "Анализ и заключение", desc: "На основании собранных данных составляется официальное экспертное заключение." },
-  { num: "04", title: "Передача документов", desc: "Вы получаете заключение с печатью, подписью и полным пакетом подтверждающих материалов." },
+  { num: "01", title: "Заявка", desc: "Оставляете заявку — мы перезваниваем в течение 2 часов и уточняем, что случилось с товаром." },
+  { num: "02", title: "Передача товара", desc: "Привозите технику к нам или оформляем курьерскую доставку. Принимаем по всей России." },
+  { num: "03", title: "Диагностика", desc: "Эксперт-товаровед проводит независимую диагностику и устанавливает причину неисправности." },
+  { num: "04", title: "Заключение и возврат", desc: "Вы получаете официальное заключение для маркетплейса или суда, деньги возвращаются продавцом." },
 ];
 
 const prices = [
   {
-    name: "Базовая",
-    price: "от 5 000 ₽",
-    desc: "Для стандартных случаев",
-    features: ["Выезд специалиста", "Письменное заключение", "Срок 5–7 рабочих дней"],
+    name: "Заключение",
+    price: "от 3 500 ₽",
+    desc: "Для маркетплейсов",
+    features: ["Диагностика техники", "Официальное заключение", "Срок 1–2 рабочих дня", "Подходит для Ozon и WB"],
     highlight: false,
   },
   {
-    name: "Профессиональная",
-    price: "от 15 000 ₽",
-    desc: "Для сложных объектов",
-    features: ["Выезд специалиста", "Развёрнутое заключение", "Фото- и видеофиксация", "Срок 3–5 рабочих дней", "Консультация юриста"],
+    name: "Возврат под ключ",
+    price: "от 8 000 ₽",
+    desc: "Самый популярный",
+    features: ["Диагностика техники", "Заключение товароведа", "Помощь в подаче заявки", "Сопровождение до возврата денег", "Срок 3–5 рабочих дней"],
     highlight: true,
   },
   {
-    name: "Судебная",
-    price: "от 30 000 ₽",
-    desc: "Для судебных процессов",
-    features: ["Выезд специалиста", "Заключение для суда", "Участие в заседании", "Рецензия на заключение", "Срок по договорённости"],
+    name: "Судебная защита",
+    price: "от 20 000 ₽",
+    desc: "Для спорных ситуаций",
+    features: ["Полная диагностика", "Заключение для суда", "Участие эксперта в суде", "Рецензия на заключение продавца", "Срок по договорённости"],
     highlight: false,
   },
 ];
 
 const certificates = [
-  { title: "СРО Оценщиков", year: "2015", num: "№ СРО-О-0042" },
   { title: "Минюст РФ", year: "2017", num: "№ 77/СЭ-002" },
   { title: "ТПП России", year: "2018", num: "№ ТПП-1847" },
-  { title: "ISO 9001:2015", year: "2020", num: "№ RU.01.0045" },
+  { title: "РФЦСЭ", year: "2019", num: "№ ТЭ-00114" },
+  { title: "ISO 9001:2015", year: "2021", num: "№ RU.01.0045" },
 ];
 
 export default function Index() {
@@ -87,7 +87,7 @@ export default function Index() {
             className="font-cormorant text-xl font-semibold tracking-wide text-white data-[scrolled]:text-stone-900"
             style={{ color: scrolled ? "#1A1A1A" : "white" }}
           >
-            ЭКСПЕРТИЗА
+            ТОВАРОВЕД
           </button>
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((l) => (
@@ -108,7 +108,7 @@ export default function Index() {
                 color: scrolled ? "#FAFAFA" : "#1A1A1A",
               }}
             >
-              Заказать экспертизу
+              Получить заключение
             </button>
           </div>
           <button
@@ -127,7 +127,7 @@ export default function Index() {
               </button>
             ))}
             <button onClick={() => scrollTo("#contacts")} className="bg-stone-900 text-stone-50 text-sm font-medium px-5 py-3 text-left">
-              Заказать экспертизу
+              Получить заключение
             </button>
           </div>
         )}
@@ -140,14 +140,14 @@ export default function Index() {
         <div className="relative z-10 max-w-6xl mx-auto px-6 w-full pt-24 pb-20">
           <div className="max-w-2xl">
             <p className="font-cormorant text-lg italic tracking-widest uppercase opacity-90 mb-4" style={{ color: "#C9A96E" }}>
-              Независимая экспертиза
+              Независимая товароведческая экспертиза
             </p>
             <h1 className="font-cormorant text-5xl md:text-7xl font-light text-white leading-tight mb-6">
-              Объективная оценка,<br />
-              <em className="font-normal" style={{ color: "#E8D4A8" }}>которой доверяют</em>
+              Техника сломалась —<br />
+              <em className="font-normal" style={{ color: "#E8D4A8" }}>верните деньги</em>
             </h1>
             <p className="text-stone-300 text-lg leading-relaxed mb-10 max-w-lg">
-              Официальные экспертные заключения для судов, страховых случаев и деловых споров. Более 15 лет на рынке.
+              Официальное заключение для возврата бракованного телефона, ноутбука или бытовой техники на Ozon и Wildberries. Без отказов.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
@@ -155,7 +155,7 @@ export default function Index() {
                 className="font-semibold px-8 py-4 text-sm tracking-wide transition-colors"
                 style={{ background: "#C9A96E", color: "#0E0E0E" }}
               >
-                Заказать экспертизу
+                Получить заключение
               </button>
               <button
                 onClick={() => scrollTo("#services")}
@@ -166,7 +166,7 @@ export default function Index() {
             </div>
           </div>
           <div className="mt-16 grid grid-cols-3 gap-8 max-w-md">
-            {[{ val: "15+", label: "лет опыта" }, { val: "3 000+", label: "экспертиз" }, { val: "98%", label: "выиграно дел" }].map((s) => (
+            {[{ val: "10+", label: "лет опыта" }, { val: "2 500+", label: "экспертиз" }, { val: "97%", label: "успешных возвратов" }].map((s) => (
               <div key={s.label} className="text-white border-l pl-4" style={{ borderColor: "rgba(201,169,110,0.4)" }}>
                 <div className="font-cormorant text-3xl font-light" style={{ color: "#C9A96E" }}>{s.val}</div>
                 <div className="text-xs text-stone-400 mt-1">{s.label}</div>
@@ -181,7 +181,7 @@ export default function Index() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-14">
             <p className="font-cormorant text-base italic tracking-widest uppercase mb-3" style={{ color: "#C9A96E" }}>Наши услуги</p>
-            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-stone-900">Все виды экспертизы</h2>
+            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-stone-900">Что мы проверяем</h2>
             <div className="w-16 h-px mt-5" style={{ background: "#C9A96E" }} />
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0 border-l border-t border-stone-200">
@@ -303,7 +303,7 @@ export default function Index() {
               </h2>
               <div className="w-16 h-px mb-8" style={{ background: "#C9A96E" }} />
               <p className="text-stone-400 text-base leading-relaxed mb-10">
-                Оставьте заявку и мы ответим в течение 2 часов в рабочее время. Первая консультация — бесплатно.
+                Оставьте заявку — ответим в течение 2 часов. Первая консультация бесплатна. Принимаем технику лично и по всей России через курьера.
               </p>
               <div className="space-y-5">
                 {[
@@ -323,7 +323,7 @@ export default function Index() {
             </div>
 
             <div className="p-8" style={{ background: "#2A2A2A" }}>
-              <h3 className="font-cormorant text-2xl font-light mb-6">Заявка на экспертизу</h3>
+              <h3 className="font-cormorant text-2xl font-light mb-6">Заявка на заключение</h3>
               <div className="space-y-4">
                 {[
                   { label: "Имя", type: "text", placeholder: "Иван Иванов" },
@@ -345,19 +345,18 @@ export default function Index() {
                     className="w-full border text-stone-300 px-4 py-3 text-sm focus:outline-none transition-colors appearance-none"
                     style={{ background: "#3A3A3A", borderColor: "#5A5A5A" }}
                   >
-                    <option value="">Выберите услугу</option>
-                    <option>Строительная экспертиза</option>
-                    <option>Независимая оценка</option>
-                    <option>Техническая экспертиза</option>
-                    <option>Товарная экспертиза</option>
-                    <option>Судебная экспертиза</option>
-                    <option>Оценка недвижимости</option>
+                    <option value="">Выберите тип техники</option>
+                    <option>Смартфон / планшет</option>
+                    <option>Ноутбук / компьютер</option>
+                    <option>Телевизор</option>
+                    <option>Холодильник / стиральная машина</option>
+                    <option>Другая бытовая техника</option>
                   </select>
                 </div>
                 <div>
                   <label className="text-xs text-stone-400 tracking-widest uppercase block mb-2">Описание задачи</label>
                   <textarea
-                    placeholder="Опишите кратко, что требуется..."
+                    placeholder="Опишите проблему: что сломалось, где покупали, маркетплейс..."
                     rows={3}
                     className="w-full border text-white placeholder-stone-500 px-4 py-3 text-sm focus:outline-none transition-colors resize-none"
                     style={{ background: "#3A3A3A", borderColor: "#5A5A5A" }}
@@ -381,7 +380,7 @@ export default function Index() {
       {/* FOOTER */}
       <footer className="bg-black text-stone-500 py-8">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="font-cormorant text-lg text-stone-400">ЭКСПЕРТИЗА</div>
+          <div className="font-cormorant text-lg text-stone-400">ТОВАРОВЕД</div>
           <div className="text-xs tracking-wide">© 2026 Все права защищены</div>
           <div className="flex gap-6 text-xs">
             <a href="#" className="hover:text-white transition-colors">Политика конфиденциальности</a>
