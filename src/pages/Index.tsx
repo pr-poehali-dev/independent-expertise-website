@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 
 const SEND_URL = "https://functions.poehali.dev/24927a74-8007-4a64-9304-0885c2072324";
@@ -13,12 +14,12 @@ const navLinks = [
 ];
 
 const services = [
-  { icon: "Smartphone", title: "Экспертиза телефонов", desc: "Смартфоны, планшеты, умные часы — определяем производственный брак и заводские дефекты." },
-  { icon: "Monitor", title: "Экспертиза компьютеров", desc: "Ноутбуки, ПК, мониторы — выявляем неисправности, возникшие не по вине покупателя." },
-  { icon: "Tv", title: "Бытовая техника", desc: "Телевизоры, холодильники, стиральные машины, пылесосы и другая техника." },
-  { icon: "ShoppingBag", title: "Возврат на маркетплейсах", desc: "Помогаем вернуть бракованный товар на Ozon и Wildberries — оформляем официальное заключение для компенсации." },
-  { icon: "ClipboardList", title: "Стоимостная экспертиза", desc: "Товароведческая стоимостная экспертиза промышленных товаров — определяем рыночную стоимость и ущерб от дефектов." },
-  { icon: "Gavel", title: "Судебная защита", desc: "Готовим заключения для судебных разбирательств с продавцами и маркетплейсами." },
+  { icon: "Smartphone", title: "Экспертиза телефонов", desc: "Смартфоны, планшеты, умные часы — определяем производственный брак и заводские дефекты.", href: "/services/phones" },
+  { icon: "Monitor", title: "Экспертиза компьютеров", desc: "Ноутбуки, ПК, мониторы — выявляем неисправности, возникшие не по вине покупателя.", href: "/services/computers" },
+  { icon: "Tv", title: "Бытовая техника", desc: "Телевизоры, холодильники, стиральные машины, пылесосы и другая техника.", href: "/services/appliances" },
+  { icon: "ShoppingBag", title: "Возврат на маркетплейсах", desc: "Помогаем вернуть бракованный товар на Ozon и Wildberries — оформляем официальное заключение для компенсации.", href: "/services/marketplace" },
+  { icon: "ClipboardList", title: "Стоимостная экспертиза", desc: "Товароведческая стоимостная экспертиза промышленных товаров — определяем рыночную стоимость и ущерб от дефектов.", href: "/services/valuation" },
+  { icon: "Gavel", title: "Судебная защита", desc: "Готовим заключения для судебных разбирательств с продавцами и маркетплейсами.", href: "/services/court" },
 ];
 
 const steps = [
@@ -189,13 +190,14 @@ export default function Index() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0 border-l border-t border-stone-200">
             {services.map((s) => (
-              <div key={s.title} className="border-r border-b border-stone-200 p-8 hover:bg-stone-50 transition-colors">
+              <Link key={s.title} to={s.href} className="border-r border-b border-stone-200 p-8 hover:bg-stone-50 transition-colors group block">
                 <div className="w-10 h-10 flex items-center justify-center mb-5" style={{ color: "#F5C518" }}>
                   <Icon name={s.icon} size={22} />
                 </div>
-                <h3 className="font-golos text-xl font-semibold text-stone-900 mb-3">{s.title}</h3>
-                <p className="text-stone-500 text-sm leading-relaxed">{s.desc}</p>
-              </div>
+                <h3 className="font-golos text-xl font-semibold text-stone-900 mb-3 group-hover:underline">{s.title}</h3>
+                <p className="text-stone-500 text-sm leading-relaxed mb-4">{s.desc}</p>
+                <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#C9A96E" }}>Подробнее →</span>
+              </Link>
             ))}
           </div>
         </div>
