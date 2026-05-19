@@ -297,7 +297,7 @@ export default function Index() {
                     <div className="w-8 h-8 flex items-center justify-center" style={{ color: "#F5C518" }}>
                       <Icon name={c.icon} size={16} />
                     </div>
-                    <span className="text-stone-300 text-sm">{c.label}</span>
+                    <span className="text-stone-300 text-xl">{c.label}</span>
                   </div>
                 ))}
               </div>
