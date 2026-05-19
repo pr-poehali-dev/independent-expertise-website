@@ -388,6 +388,9 @@ export default function Index() {
             <a href="#" className="hover:text-white transition-colors">Договор оферты</a>
           </div>
         </div>
+        <div className="max-w-6xl mx-auto px-6 mt-4 pt-4 border-t border-stone-900 text-center text-xs text-stone-700">
+          ИНН 662339146709 &nbsp;·&nbsp; ОГРНИП 315665800075592
+        </div>
       </footer>
     </div>
   );
