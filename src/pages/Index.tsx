@@ -82,13 +82,11 @@ export default function Index() {
         }`}
       >
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
-          <button
+          <button className="font-cormorant text-xl font-semibold tracking-wide data-[scrolled]:text-stone-900 mx-0 bg-transparent text-[#ffffff]"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="font-cormorant text-xl font-semibold tracking-wide text-white data-[scrolled]:text-stone-900"
             style={{ color: scrolled ? "#1A1A1A" : "white" }}
-          >
-            ТОВАРОВЕД
-          </button>
+          >Курсор-Эксперт</button>
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((l) => (
               <button
@@ -139,12 +137,12 @@ export default function Index() {
         <div className="absolute inset-0 bg-stone-950/65" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 w-full pt-24 pb-20">
           <div className="max-w-2xl">
-            <p className="font-cormorant text-lg italic tracking-widest uppercase opacity-90 mb-4" style={{ color: "#C9A96E" }}>
+            <p className="font-cormorant text-lg italic tracking-widest uppercase opacity-90 my-2 py-0 font-bold text-[#e99c0e]" style={{ color: "#C9A96E" }}>
               Независимая товароведческая экспертиза
             </p>
             <h1 className="font-cormorant text-5xl md:text-7xl font-light text-white leading-tight mb-6">
               Техника сломалась —<br />
-              <em className="font-normal" style={{ color: "#E8D4A8" }}>верните деньги</em>
+              <em className="font-stone text-[#e99c0e]" style={{ color: "#E8D4A8" }}>верните деньги</em>
             </h1>
             <p className="text-stone-300 text-lg leading-relaxed mb-10 max-w-lg">
               Официальное заключение для возврата бракованного телефона, ноутбука или бытовой техники на Ozon и Wildberries. Без отказов.
