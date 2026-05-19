@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Icon from "@/components/ui/icon";
 
-const HERO_IMAGE = "https://cdn.poehali.dev/projects/4bae9987-38e7-476d-b7ba-0a86875d56c3/files/94f15286-bb53-429b-831a-230f54c17ff1.jpg";
+const HERO_IMAGE = "https://cdn.poehali.dev/projects/4bae9987-38e7-476d-b7ba-0a86875d56c3/files/1f3c8d88-a3c0-43f8-aa0c-1040344f33a4.jpg";
 
 const navLinks = [
   { label: "Услуги", href: "#services" },
