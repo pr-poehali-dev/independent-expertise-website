@@ -50,12 +50,6 @@ const prices = [
   },
 ];
 
-const certificates = [
-  { title: "Минюст РФ", year: "2017", num: "№ 77/СЭ-002" },
-  { title: "ТПП России", year: "2018", num: "№ ТПП-1847" },
-  { title: "РФЦСЭ", year: "2019", num: "№ ТЭ-00114" },
-  { title: "ISO 9001:2015", year: "2021", num: "№ RU.01.0045" },
-];
 
 export default function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -264,28 +258,6 @@ export default function Index() {
           <p className="text-stone-400 text-sm mt-8 text-center">
             Точная стоимость определяется после консультации. Возможна рассрочка.
           </p>
-        </div>
-      </section>
-
-      {/* CERTIFICATES */}
-      <section className="py-16 bg-white border-y border-stone-200">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="mb-10 text-center">
-            <p className="font-golos text-sm font-semibold tracking-widest uppercase mb-2" style={{ color: "#F5C518" }}>Документы и сертификаты</p>
-            <h2 className="font-golos text-3xl font-light text-stone-900">Наши аккредитации</h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {certificates.map((c) => (
-              <div key={c.title} className="flex flex-col items-center text-center p-6 border border-stone-200 hover:border-stone-400 transition-colors group">
-                <div className="w-12 h-12 flex items-center justify-center mb-4 border" style={{ color: "#F5C518", borderColor: "rgba(245,197,24,0.3)" }}>
-                  <Icon name="Award" size={20} />
-                </div>
-                <div className="font-golos text-base font-semibold text-stone-900 mb-1">{c.title}</div>
-                <div className="text-xs text-stone-400 mb-1">{c.num}</div>
-                <div className="text-xs text-stone-300">с {c.year} года</div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
