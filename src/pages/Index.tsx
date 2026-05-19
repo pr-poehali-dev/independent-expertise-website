@@ -140,9 +140,9 @@ export default function Index() {
             <p className="font-golos text-sm font-semibold tracking-widest uppercase mb-4" style={{ color: "#F5C518" }}>
               Независимая товароведческая экспертиза
             </p>
-            <h1 className="font-golos text-5xl md:text-7xl font-light text-white leading-tight mb-6">
+            <h1 className="font-golos md:text-7xl font-light text-white leading-tight mb-6 text-5xl">
               Техника сломалась —<br />
-              <span className="font-semibold" style={{ color: "#F5C518" }}>верните деньги</span>
+              <span className="font-semibold text-4xl" style={{ color: "#F5C518" }}>верните деньги</span>
             </h1>
             <p className="text-stone-300 text-lg leading-relaxed mb-10 max-w-lg">
               Официальное заключение для возврата бракованного телефона, ноутбука или бытовой техники на Ozon и Wildberries. Без отказов.
@@ -378,7 +378,7 @@ export default function Index() {
       {/* FOOTER */}
       <footer className="bg-black text-stone-500 py-8">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="font-golos text-lg font-semibold text-stone-400">ТОВАРОВЕД</div>
+          <div className="font-golos text-lg font-semibold text-stone-400">КУРСОР</div>
           <div className="text-xs tracking-wide">© 2026 Все права защищены</div>
           <div className="flex gap-6 text-xs">
             <a href="#" className="hover:text-white transition-colors">Политика конфиденциальности</a>
