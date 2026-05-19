@@ -7,6 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+			"./1779214208307362654.html"
 	],
 	prefix: "",
 	theme: {
@@ -18,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				cormorant: ['Cormorant', 'serif'],
+				golos: ['Golos Text', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,6 +66,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				gold: {
+					DEFAULT: '#C9A96E',
+					light: '#E8D4A8',
+					dark: '#9A7A45',
+				},
+				stone: {
+					950: '#0E0E0E',
+					900: '#1A1A1A',
+					800: '#2A2A2A',
+					700: '#3A3A3A',
+					600: '#5A5A5A',
+					400: '#9A9A9A',
+					200: '#D4D4D4',
+					100: '#F0F0F0',
+					50: '#FAFAFA',
 				}
 			},
 			borderRadius: {
