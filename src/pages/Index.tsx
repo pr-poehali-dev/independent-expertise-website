@@ -86,7 +86,7 @@ export default function Index() {
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="font-golos text-xl font-semibold tracking-wide"
             style={{ color: scrolled ? "#1A1A1A" : "white" }}
-          >ТОВАРОВЕД</button>
+          >КУРСОР</button>
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((l) => (
               <button
@@ -140,9 +140,9 @@ export default function Index() {
             <p className="font-golos text-sm font-semibold tracking-widest uppercase mb-4" style={{ color: "#F5C518" }}>
               Независимая товароведческая экспертиза
             </p>
-            <h1 className="font-golos md:text-7xl font-light text-white leading-tight mb-6 text-4xl">
+            <h1 className="font-golos text-5xl md:text-7xl font-light text-white leading-tight mb-6">
               Техника сломалась —<br />
-              <span className="font-semibold text-4xl" style={{ color: "#F5C518" }}>верните деньги</span>
+              <span className="font-semibold text-5xl md:text-7xl" style={{ color: "#F5C518" }}>верните деньги</span>
             </h1>
             <p className="text-stone-300 text-lg leading-relaxed mb-10 max-w-lg">
               Официальное заключение для возврата бракованного телефона, ноутбука или бытовой техники на Ozon и Wildberries. Без отказов.
@@ -305,10 +305,10 @@ export default function Index() {
               </p>
               <div className="space-y-5">
                 {[
-                  { icon: "Phone", label: "+7 (495) 000-00-00" },
+                  { icon: "Phone", label: "+7 912-299-70-00" },
                   { icon: "Mail", label: "info@expertiza.ru" },
-                  { icon: "MapPin", label: "Москва, ул. Примерная, 1" },
-                  { icon: "Clock", label: "Пн–Пт: 9:00–18:00" },
+                  { icon: "MapPin", label: "Нижний Тагил, ул. Орджоникидзе, 31" },
+                  { icon: "Clock", label: "Пн–Пт: 10:00–19:00" },
                 ].map((c) => (
                   <div key={c.label} className="flex items-center gap-4">
                     <div className="w-8 h-8 flex items-center justify-center" style={{ color: "#F5C518" }}>
