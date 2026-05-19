@@ -82,11 +82,11 @@ export default function Index() {
         }`}
       >
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
-          <button className="font-cormorant text-xl font-semibold tracking-wide data-[scrolled]:text-stone-900 mx-0 bg-transparent text-[#ffffff]"
+          <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="font-cormorant text-xl font-semibold tracking-wide text-white data-[scrolled]:text-stone-900"
+            className="font-golos text-xl font-semibold tracking-wide"
             style={{ color: scrolled ? "#1A1A1A" : "white" }}
-          >Курсор-Эксперт</button>
+          >ТОВАРОВЕД</button>
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((l) => (
               <button
@@ -102,7 +102,7 @@ export default function Index() {
               onClick={() => scrollTo("#contacts")}
               className="text-sm font-medium px-5 py-2 transition-colors"
               style={{
-                background: scrolled ? "#1A1A1A" : "rgba(201,169,110,0.9)",
+                background: scrolled ? "#1A1A1A" : "#F5C518",
                 color: scrolled ? "#FAFAFA" : "#1A1A1A",
               }}
             >
@@ -137,12 +137,12 @@ export default function Index() {
         <div className="absolute inset-0 bg-stone-950/65" />
         <div className="relative z-10 max-w-6xl mx-auto px-6 w-full pt-24 pb-20">
           <div className="max-w-2xl">
-            <p className="font-cormorant italic tracking-widest uppercase opacity-90 my-2 py-0 text-[#e99c0e] font-bold text-2xl" style={{ color: "#C9A96E" }}>
+            <p className="font-golos text-sm font-semibold tracking-widest uppercase mb-4" style={{ color: "#F5C518" }}>
               Независимая товароведческая экспертиза
             </p>
-            <h1 className="font-cormorant text-5xl md:text-7xl font-light text-white leading-tight mb-6">
+            <h1 className="font-golos text-5xl md:text-7xl font-light text-white leading-tight mb-6">
               Техника сломалась —<br />
-              <em className="font-stone text-[#c8ab6d]" style={{ color: "#E8D4A8" }}>верните деньги</em>
+              <span className="font-semibold" style={{ color: "#F5C518" }}>верните деньги</span>
             </h1>
             <p className="text-stone-300 text-lg leading-relaxed mb-10 max-w-lg">
               Официальное заключение для возврата бракованного телефона, ноутбука или бытовой техники на Ozon и Wildberries. Без отказов.
@@ -151,7 +151,7 @@ export default function Index() {
               <button
                 onClick={() => scrollTo("#contacts")}
                 className="font-semibold px-8 py-4 text-sm tracking-wide transition-colors"
-                style={{ background: "#C9A96E", color: "#0E0E0E" }}
+                style={{ background: "#F5C518", color: "#0E0E0E" }}
               >
                 Получить заключение
               </button>
@@ -165,8 +165,8 @@ export default function Index() {
           </div>
           <div className="mt-16 grid grid-cols-3 gap-8 max-w-md">
             {[{ val: "10+", label: "лет опыта" }, { val: "2 500+", label: "экспертиз" }, { val: "97%", label: "успешных возвратов" }].map((s) => (
-              <div key={s.label} className="text-white border-l pl-4" style={{ borderColor: "rgba(201,169,110,0.4)" }}>
-                <div className="font-cormorant text-3xl font-light" style={{ color: "#C9A96E" }}>{s.val}</div>
+              <div key={s.label} className="text-white border-l pl-4" style={{ borderColor: "rgba(245,197,24,0.4)" }}>
+                <div className="font-golos text-3xl font-semibold" style={{ color: "#F5C518" }}>{s.val}</div>
                 <div className="text-xs text-stone-400 mt-1">{s.label}</div>
               </div>
             ))}
@@ -178,17 +178,17 @@ export default function Index() {
       <section id="services" className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-14">
-            <p className="font-cormorant text-base italic tracking-widest uppercase mb-3" style={{ color: "#C9A96E" }}>Наши услуги</p>
-            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-stone-900">Что мы проверяем</h2>
-            <div className="w-16 h-px mt-5" style={{ background: "#C9A96E" }} />
+            <p className="font-golos text-sm font-semibold tracking-widest uppercase mb-3" style={{ color: "#C9A96E" }}>Наши услуги</p>
+            <h2 className="font-golos text-4xl md:text-5xl font-light text-stone-900">Что мы проверяем</h2>
+            <div className="w-16 h-px mt-5" style={{ background: "#F5C518" }} />
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-0 border-l border-t border-stone-200">
             {services.map((s) => (
               <div key={s.title} className="border-r border-b border-stone-200 p-8 hover:bg-stone-50 transition-colors">
-                <div className="w-10 h-10 flex items-center justify-center mb-5" style={{ color: "#C9A96E" }}>
+                <div className="w-10 h-10 flex items-center justify-center mb-5" style={{ color: "#F5C518" }}>
                   <Icon name={s.icon} size={22} />
                 </div>
-                <h3 className="font-cormorant text-xl font-semibold text-stone-900 mb-3">{s.title}</h3>
+                <h3 className="font-golos text-xl font-semibold text-stone-900 mb-3">{s.title}</h3>
                 <p className="text-stone-500 text-sm leading-relaxed">{s.desc}</p>
               </div>
             ))}
@@ -200,15 +200,15 @@ export default function Index() {
       <section id="process" className="py-24 bg-stone-950 text-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-14">
-            <p className="font-cormorant text-base italic tracking-widest uppercase mb-3" style={{ color: "#C9A96E" }}>Как мы работаем</p>
-            <h2 className="font-cormorant text-4xl md:text-5xl font-light">Прозрачный процесс</h2>
-            <div className="w-16 h-px mt-5" style={{ background: "#C9A96E" }} />
+            <p className="font-golos text-sm font-semibold tracking-widest uppercase mb-3" style={{ color: "#F5C518" }}>Как мы работаем</p>
+            <h2 className="font-golos text-4xl md:text-5xl font-light">Прозрачный процесс</h2>
+            <div className="w-16 h-px mt-5" style={{ background: "#F5C518" }} />
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((s) => (
               <div key={s.num}>
-                <div className="font-cormorant text-5xl font-light mb-4" style={{ color: "rgba(201,169,110,0.3)" }}>{s.num}</div>
-                <h3 className="font-cormorant text-xl font-semibold mb-3 text-white">{s.title}</h3>
+                <div className="font-golos text-5xl font-light mb-4" style={{ color: "rgba(245,197,24,0.3)" }}>{s.num}</div>
+                <h3 className="font-golos text-xl font-semibold mb-3 text-white">{s.title}</h3>
                 <p className="text-stone-400 text-sm leading-relaxed">{s.desc}</p>
               </div>
             ))}
@@ -220,9 +220,9 @@ export default function Index() {
       <section id="prices" className="py-24 bg-stone-50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-14">
-            <p className="font-cormorant text-base italic tracking-widest uppercase mb-3" style={{ color: "#C9A96E" }}>Стоимость услуг</p>
-            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-stone-900">Прозрачные цены</h2>
-            <div className="w-16 h-px mt-5" style={{ background: "#C9A96E" }} />
+            <p className="font-golos text-sm font-semibold tracking-widest uppercase mb-3" style={{ color: "#F5C518" }}>Стоимость услуг</p>
+            <h2 className="font-golos text-4xl md:text-5xl font-light text-stone-900">Прозрачные цены</h2>
+            <div className="w-16 h-px mt-5" style={{ background: "#F5C518" }} />
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {prices.map((p) => (
@@ -233,11 +233,11 @@ export default function Index() {
                 }`}
                 style={p.highlight ? { background: "#1A1A1A", borderColor: "#1A1A1A", color: "white" } : {}}
               >
-                {p.highlight && <div className="absolute top-0 left-0 right-0 h-1" style={{ background: "#C9A96E" }} />}
-                <div className="text-xs font-medium tracking-widest uppercase mb-2" style={{ color: p.highlight ? "#C9A96E" : "#9A9A9A" }}>
+                {p.highlight && <div className="absolute top-0 left-0 right-0 h-1" style={{ background: "#F5C518" }} />}
+                <div className="text-xs font-medium tracking-widest uppercase mb-2" style={{ color: p.highlight ? "#F5C518" : "#9A9A9A" }}>
                   {p.name}
                 </div>
-                <div className="font-cormorant text-4xl font-light mb-1" style={{ color: p.highlight ? "white" : "#1A1A1A" }}>
+                <div className="font-golos text-4xl font-light mb-1" style={{ color: p.highlight ? "white" : "#1A1A1A" }}>
                   {p.price}
                 </div>
                 <div className="text-sm mb-6" style={{ color: p.highlight ? "#9A9A9A" : "#5A5A5A" }}>{p.desc}</div>
@@ -253,7 +253,7 @@ export default function Index() {
                   onClick={() => scrollTo("#contacts")}
                   className="w-full py-3 text-sm font-medium tracking-wide transition-colors"
                   style={p.highlight
-                    ? { background: "#C9A96E", color: "#0E0E0E" }
+                    ? { background: "#F5C518", color: "#0E0E0E" }
                     : { border: "1px solid #1A1A1A", color: "#1A1A1A", background: "transparent" }
                   }
                 >
@@ -272,16 +272,16 @@ export default function Index() {
       <section className="py-16 bg-white border-y border-stone-200">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-10 text-center">
-            <p className="font-cormorant text-base italic tracking-widest uppercase mb-2" style={{ color: "#C9A96E" }}>Документы и сертификаты</p>
-            <h2 className="font-cormorant text-3xl font-light text-stone-900">Наши аккредитации</h2>
+            <p className="font-golos text-sm font-semibold tracking-widest uppercase mb-2" style={{ color: "#F5C518" }}>Документы и сертификаты</p>
+            <h2 className="font-golos text-3xl font-light text-stone-900">Наши аккредитации</h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {certificates.map((c) => (
               <div key={c.title} className="flex flex-col items-center text-center p-6 border border-stone-200 hover:border-stone-400 transition-colors group">
-                <div className="w-12 h-12 flex items-center justify-center mb-4 border" style={{ color: "#C9A96E", borderColor: "rgba(201,169,110,0.3)" }}>
+                <div className="w-12 h-12 flex items-center justify-center mb-4 border" style={{ color: "#F5C518", borderColor: "rgba(245,197,24,0.3)" }}>
                   <Icon name="Award" size={20} />
                 </div>
-                <div className="font-cormorant text-base font-semibold text-stone-900 mb-1">{c.title}</div>
+                <div className="font-golos text-base font-semibold text-stone-900 mb-1">{c.title}</div>
                 <div className="text-xs text-stone-400 mb-1">{c.num}</div>
                 <div className="text-xs text-stone-300">с {c.year} года</div>
               </div>
@@ -295,11 +295,11 @@ export default function Index() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
-              <p className="font-cormorant text-base italic tracking-widest uppercase mb-3" style={{ color: "#C9A96E" }}>Свяжитесь с нами</p>
-              <h2 className="font-cormorant text-4xl md:text-5xl font-light mb-6">
+              <p className="font-golos text-sm font-semibold tracking-widest uppercase mb-3" style={{ color: "#F5C518" }}>Свяжитесь с нами</p>
+              <h2 className="font-golos text-4xl md:text-5xl font-light mb-6">
                 Получите<br />консультацию
               </h2>
-              <div className="w-16 h-px mb-8" style={{ background: "#C9A96E" }} />
+              <div className="w-16 h-px mb-8" style={{ background: "#F5C518" }} />
               <p className="text-stone-400 text-base leading-relaxed mb-10">
                 Оставьте заявку — ответим в течение 2 часов. Первая консультация бесплатна. Принимаем технику лично и по всей России через курьера.
               </p>
@@ -311,7 +311,7 @@ export default function Index() {
                   { icon: "Clock", label: "Пн–Пт: 9:00–18:00" },
                 ].map((c) => (
                   <div key={c.label} className="flex items-center gap-4">
-                    <div className="w-8 h-8 flex items-center justify-center" style={{ color: "#C9A96E" }}>
+                    <div className="w-8 h-8 flex items-center justify-center" style={{ color: "#F5C518" }}>
                       <Icon name={c.icon} size={16} />
                     </div>
                     <span className="text-stone-300 text-sm">{c.label}</span>
@@ -321,7 +321,7 @@ export default function Index() {
             </div>
 
             <div className="p-8" style={{ background: "#2A2A2A" }}>
-              <h3 className="font-cormorant text-2xl font-light mb-6">Заявка на заключение</h3>
+              <h3 className="font-golos text-2xl font-semibold mb-6">Заявка на заключение</h3>
               <div className="space-y-4">
                 {[
                   { label: "Имя", type: "text", placeholder: "Иван Иванов" },
@@ -362,7 +362,7 @@ export default function Index() {
                 </div>
                 <button
                   className="w-full font-semibold py-4 text-sm tracking-wide transition-colors mt-2"
-                  style={{ background: "#C9A96E", color: "#0E0E0E" }}
+                  style={{ background: "#F5C518", color: "#0E0E0E" }}
                 >
                   Отправить заявку
                 </button>
@@ -378,7 +378,7 @@ export default function Index() {
       {/* FOOTER */}
       <footer className="bg-black text-stone-500 py-8">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="font-cormorant text-lg text-stone-400">ТОВАРОВЕД</div>
+          <div className="font-golos text-lg font-semibold text-stone-400">ТОВАРОВЕД</div>
           <div className="text-xs tracking-wide">© 2026 Все права защищены</div>
           <div className="flex gap-6 text-xs">
             <a href="#" className="hover:text-white transition-colors">Политика конфиденциальности</a>
