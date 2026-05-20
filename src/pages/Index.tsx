@@ -269,9 +269,15 @@ export default function Index() {
               </div>
             ))}
           </div>
-          <p className="text-stone-400 text-sm mt-8 text-center">
-            Точная стоимость определяется после консультации. Возможна рассрочка.
-          </p>
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
+            <p className="text-stone-400 text-sm">
+              Точная стоимость определяется после консультации. Возможна рассрочка.
+            </p>
+            <span className="hidden sm:block text-stone-600">·</span>
+            <p className="text-sm font-semibold" style={{ color: "#C9A96E" }}>
+              Стоимость экспертизы полностью возмещается заказчику
+            </p>
+          </div>
         </div>
       </section>
 
