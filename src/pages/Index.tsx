@@ -229,7 +229,7 @@ export default function Index() {
           <div className="mb-14">
             <p className="font-golos text-sm font-semibold tracking-widest uppercase mb-3" style={{ color: "#F5C518" }}>Стоимость услуг</p>
             <h2 className="font-golos text-4xl md:text-5xl font-light text-stone-900">Прозрачные цены</h2>
-            <p className="text-sm font-semibold mt-3" style={{ color: "#F5C518" }}>Стоимость экспертизы полностью возмещается заказчику</p>
+            <p className="font-semibold mt-3 text-xl text-[#000000]" style={{ color: "#F5C518" }}>Стоимость экспертизы полностью возмещается заказчику</p>
             <div className="w-16 h-px mt-5" style={{ background: "#F5C518" }} />
           </div>
           <div className="grid md:grid-cols-3 gap-6">
