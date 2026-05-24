@@ -366,7 +366,7 @@ export default function ServiceCenter() {
       </section>
 
       {/* CONTACTS */}
-      <section id="contacts" className="py-24 text-white" style={{ background: "#040E28" }}>
+      <section id="contacts" className="py-24 text-white" style={{ background: C.accentDark }}>
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
           <div>
             <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: "#5BB8FF" }}>Записаться на ремонт</p>
