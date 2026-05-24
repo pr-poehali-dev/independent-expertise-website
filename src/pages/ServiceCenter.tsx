@@ -285,13 +285,9 @@ export default function ServiceCenter() {
             <div className="relative">
               <img src={active.image} alt={active.title} className="w-full object-cover" style={{ height: 480 }} />
               <div className="absolute bottom-0 left-0 right-0 p-6" style={{ background: "linear-gradient(to top, rgba(11,45,100,0.92), transparent)" }}>
-                <div className="flex items-center gap-2 text-white mb-2">
-                  <Icon name="CheckCircle" size={16} style={{ color: "#7EC8FF" }} />
-                  <span className="text-sm">Гарантия на работу и запчасти</span>
-                </div>
                 <div className="flex items-center gap-2 text-white">
                   <Icon name="CheckCircle" size={16} style={{ color: "#7EC8FF" }} />
-                  <span className="text-sm">Бесплатная диагностика</span>
+                  <span className="text-sm">Гарантия на работу и запчасти</span>
                 </div>
               </div>
             </div>
@@ -309,7 +305,7 @@ export default function ServiceCenter() {
               <div className="w-12 h-px mb-8" style={{ background: "#7EC8FF" }} />
               <div className="space-y-5">
                 {[
-                  { icon: "Search", t: "Бесплатная диагностика", d: "Принимаем устройство и проводим полную диагностику бесплатно. Называем точную причину неисправности." },
+                  { icon: "Search", t: "Профессиональная диагностика", d: "Принимаем устройство и проводим полную диагностику. Называем точную причину неисправности до начала ремонта." },
                   { icon: "Cpu", t: "Профессиональное оборудование", d: "Осциллографы, мультиметры, BGA-станции, ультразвуковые ванны — работаем как в современной лаборатории." },
                   { icon: "Shield", t: "Гарантия на результат", d: "На все виды ремонта выдаём гарантийный талон. От 30 до 90 дней в зависимости от вида работ." },
                   { icon: "Clock", t: "Срочный ремонт", d: "Большинство ремонтов выполняем в день обращения или на следующий день. Без долгих ожиданий." },
@@ -358,8 +354,8 @@ export default function ServiceCenter() {
       <section className="py-12 px-6" style={{ background: C.accent }}>
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h3 className="font-golos text-2xl font-semibold text-white">Диагностика — бесплатно</h3>
-            <p className="text-blue-100 text-sm mt-1">Приносите технику сегодня — узнаете причину неисправности и стоимость ремонта без каких-либо обязательств</p>
+            <h3 className="font-golos text-2xl font-semibold text-white">Запишитесь на ремонт сегодня</h3>
+            <p className="text-blue-100 text-sm mt-1">Приносите технику — узнаете причину неисправности и стоимость ремонта до начала работ</p>
           </div>
           <button onClick={() => scrollTo("#contacts")}
             className="flex-shrink-0 font-semibold px-8 py-4 text-sm tracking-wide transition-colors"
@@ -370,25 +366,37 @@ export default function ServiceCenter() {
       </section>
 
       {/* CONTACTS */}
-      <section id="contacts" className="py-24 text-white" style={{ background: C.accentDark }}>
+      <section id="contacts" className="py-24 text-white" style={{ background: "#040E28" }}>
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
           <div>
-            <p className="text-sm font-semibold tracking-widest uppercase mb-4 text-blue-300">Записаться на ремонт</p>
-            <h2 className="font-golos text-4xl font-light mb-4">Свяжитесь с нами</h2>
-            <div className="w-12 h-px mb-8" style={{ background: "#7EC8FF" }} />
-            <div className="space-y-4 text-sm text-blue-200 mb-10">
-              <div className="flex items-center gap-3"><Icon name="Phone" size={14} style={{ color: "#7EC8FF" }} />+7 912-299-70-00</div>
-              <div className="flex items-center gap-3"><Icon name="Mail" size={14} style={{ color: "#7EC8FF" }} />diegovirt@yandex.ru</div>
-              <div className="flex items-center gap-3"><Icon name="MapPin" size={14} style={{ color: "#7EC8FF" }} />Нижний Тагил, ул. Орджоникидзе, 31</div>
-              <div className="flex items-center gap-3"><Icon name="Clock" size={14} style={{ color: "#7EC8FF" }} />Пн–Пт: 10:00–19:00, Сб: 11:00–17:00</div>
+            <p className="text-sm font-bold tracking-widest uppercase mb-4" style={{ color: "#5BB8FF" }}>Записаться на ремонт</p>
+            <h2 className="font-golos text-4xl font-bold mb-4 text-white">Свяжитесь с нами</h2>
+            <div className="w-12 h-1 mb-8" style={{ background: C.accent }} />
+            <div className="space-y-4 mb-10">
+              <div className="flex items-center gap-4 p-4" style={{ background: "rgba(91,184,255,0.10)", borderLeft: `3px solid ${C.accent}` }}>
+                <Icon name="Phone" size={18} style={{ color: "#5BB8FF", flexShrink: 0 }} />
+                <span className="text-white font-semibold text-base">+7 912-299-70-00</span>
+              </div>
+              <div className="flex items-center gap-4 p-4" style={{ background: "rgba(91,184,255,0.10)", borderLeft: `3px solid ${C.accent}` }}>
+                <Icon name="Mail" size={18} style={{ color: "#5BB8FF", flexShrink: 0 }} />
+                <span className="text-white font-semibold text-base">diegovirt@yandex.ru</span>
+              </div>
+              <div className="flex items-center gap-4 p-4" style={{ background: "rgba(91,184,255,0.10)", borderLeft: `3px solid ${C.accent}` }}>
+                <Icon name="MapPin" size={18} style={{ color: "#5BB8FF", flexShrink: 0 }} />
+                <span className="text-white font-semibold text-base">Нижний Тагил, ул. Орджоникидзе, 31</span>
+              </div>
+              <div className="flex items-center gap-4 p-4" style={{ background: "rgba(91,184,255,0.10)", borderLeft: `3px solid ${C.accent}` }}>
+                <Icon name="Clock" size={18} style={{ color: "#5BB8FF", flexShrink: 0 }} />
+                <span className="text-white font-semibold text-base">Пн–Пт: 10:00–19:00, Сб: 11:00–17:00</span>
+              </div>
             </div>
-            <div className="p-6 border border-blue-800">
-              <p className="text-sm text-blue-200 leading-relaxed">
-                Также оказываем услуги <Link to="/" className="underline hover:text-white transition-colors" style={{ color: "#7EC8FF" }}>независимой товароведческой экспертизы</Link> — если техника сломалась по гарантии и продавец отказывает в возврате.
+            <div className="p-6" style={{ background: "rgba(91,184,255,0.08)", border: "1px solid rgba(91,184,255,0.25)" }}>
+              <p className="text-sm text-white leading-relaxed">
+                Также оказываем услуги <Link to="/" className="font-semibold underline hover:text-blue-300 transition-colors" style={{ color: "#5BB8FF" }}>независимой товароведческой экспертизы</Link> — если техника сломалась по гарантии и продавец отказывает в возврате.
               </p>
             </div>
           </div>
-          <div className="p-8" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(126,200,255,0.2)" }}>
+          <div className="p-8" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(91,184,255,0.3)" }}>
             {sent ? (
               <div className="text-center py-8">
                 <Icon name="CheckCircle" size={48} style={{ color: "#7EC8FF", margin: "0 auto 16px" }} />
