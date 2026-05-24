@@ -7,7 +7,7 @@ const SEND_URL = "https://functions.poehali.dev/24927a74-8007-4a64-9304-0885c207
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/4bae9987-38e7-476d-b7ba-0a86875d56c3/files/1f3c8d88-a3c0-43f8-aa0c-1040344f33a4.jpg";
 
 const IMG_WORKSHOP = "https://cdn.poehali.dev/projects/4bae9987-38e7-476d-b7ba-0a86875d56c3/files/ea7b1c2b-41a6-4ccc-9865-94f884dcb806.jpg";
-const IMG_TV = "https://cdn.poehali.dev/projects/4bae9987-38e7-476d-b7ba-0a86875d56c3/files/6fac9cb2-b245-491c-bbeb-8f8d9335124e.jpg";
+const IMG_TV = "https://cdn.poehali.dev/projects/4bae9987-38e7-476d-b7ba-0a86875d56c3/files/eb96e48f-953a-44ff-835a-400d0f316ba1.jpg";
 const IMG_LAPTOP = "https://cdn.poehali.dev/projects/4bae9987-38e7-476d-b7ba-0a86875d56c3/files/e0291b31-0f92-4ec2-9cbe-58da8374622a.jpg";
 const IMG_PC = "https://cdn.poehali.dev/projects/4bae9987-38e7-476d-b7ba-0a86875d56c3/files/d63298cb-d288-4fd8-904a-178afb1d1fcf.jpg";
 const IMG_PHONE = "https://cdn.poehali.dev/projects/4bae9987-38e7-476d-b7ba-0a86875d56c3/files/41632bc7-7e82-48a1-8e59-8fa6a6427231.jpg";
