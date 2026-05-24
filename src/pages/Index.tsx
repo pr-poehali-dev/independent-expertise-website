@@ -119,16 +119,7 @@ export default function Index() {
             >
               Сервисный центр
             </Link>
-            <button
-              onClick={() => scrollTo("#contacts")}
-              className="text-sm font-medium px-5 py-2 transition-colors"
-              style={{
-                background: scrolled ? "#1A1A1A" : "#F5C518",
-                color: scrolled ? "#FAFAFA" : "#1A1A1A",
-              }}
-            >
-              Получить заключение
-            </button>
+
           </div>
           <button
             className="md:hidden p-2"
