@@ -13,6 +13,8 @@ const navLinks = [
   { label: "Контакты", href: "#contacts" },
 ];
 
+const SC_LINK = "/service-center";
+
 const services = [
   { icon: "Smartphone", title: "Экспертиза телефонов", desc: "Смартфоны, планшеты, умные часы — определяем производственный брак и заводские дефекты.", href: "/services/phones" },
   { icon: "Monitor", title: "Экспертиза компьютеров", desc: "Ноутбуки, ПК, мониторы — выявляем неисправности, возникшие не по вине покупателя.", href: "/services/computers" },
@@ -107,6 +109,16 @@ export default function Index() {
                 {l.label}
               </button>
             ))}
+            <Link
+              to={SC_LINK}
+              className="text-sm font-medium transition-colors tracking-wide border px-4 py-2"
+              style={{
+                color: scrolled ? "#1A1A1A" : "white",
+                borderColor: scrolled ? "#D5D5D5" : "rgba(255,255,255,0.4)",
+              }}
+            >
+              Сервисный центр
+            </Link>
             <button
               onClick={() => scrollTo("#contacts")}
               className="text-sm font-medium px-5 py-2 transition-colors"
@@ -133,6 +145,9 @@ export default function Index() {
                 {l.label}
               </button>
             ))}
+            <Link to={SC_LINK} className="text-base font-medium text-stone-700">
+              Сервисный центр
+            </Link>
             <button onClick={() => scrollTo("#contacts")} className="bg-stone-900 text-stone-50 text-sm font-medium px-5 py-3 text-left">
               Получить заключение
             </button>

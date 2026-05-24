@@ -13,6 +13,7 @@ import MarketplaceReturn from "./pages/services/MarketplaceReturn";
 import ValuationExpertise from "./pages/services/ValuationExpertise";
 import CourtExpertise from "./pages/services/CourtExpertise";
 import LawyerConsultation from "./pages/services/LawyerConsultation";
+import ServiceCenter from "./pages/ServiceCenter";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/services/valuation" element={<ValuationExpertise />} />
           <Route path="/services/court" element={<CourtExpertise />} />
           <Route path="/services/lawyer" element={<LawyerConsultation />} />
+          <Route path="/service-center" element={<ServiceCenter />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
