@@ -182,7 +182,7 @@ export default function ServiceCenter() {
         <div className="absolute inset-0" style={{ background: "rgba(4, 20, 55, 0.88)" }} />
         {/* синяя вертикальная полоса-акцент */}
         <div className="absolute left-0 top-0 bottom-0 w-1" style={{ background: C.accent }} />
-        <div className="relative z-10 max-w-6xl mx-auto px-6 w-full pt-24 pb-20">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 w-full pt-24 pb-20 rounded-0 bg-transparent">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 mb-6" style={{ background: C.accent }}>
               <Icon name="Wrench" size={12} style={{ color: "white" }} />
