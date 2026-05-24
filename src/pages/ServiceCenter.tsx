@@ -195,7 +195,7 @@ export default function ServiceCenter() {
             <div className="w-16 h-1 mb-6" style={{ background: C.accent }} />
             <p className="text-white text-lg leading-relaxed mb-10 max-w-lg" style={{ opacity: 0.85 }}>
               Ремонт телевизоров, ноутбуков, компьютеров и телефонов.<br />
-              <span className="font-semibold text-white">Диагностика бесплатно.</span> Гарантия на все виды работ.
+              <span className="font-semibold text-white"></span> Гарантия на все виды работ.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button onClick={() => scrollTo("#contacts")}
