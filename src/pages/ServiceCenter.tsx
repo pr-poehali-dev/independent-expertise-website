@@ -179,34 +179,45 @@ export default function ServiceCenter() {
       {/* HERO */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${HERO_IMAGE})` }} />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(11,45,100,0.82) 0%, rgba(27,111,200,0.70) 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "rgba(4, 20, 55, 0.88)" }} />
+        {/* синяя вертикальная полоса-акцент */}
+        <div className="absolute left-0 top-0 bottom-0 w-1" style={{ background: C.accent }} />
         <div className="relative z-10 max-w-6xl mx-auto px-6 w-full pt-24 pb-20">
           <div className="max-w-2xl">
-            <p className="font-golos text-sm font-semibold tracking-widest uppercase mb-4 text-blue-300">СЕРВИСНЫЙ ЦЕНТР В НИЖНЕМ ТАГИЛЕ</p>
-            <h1 className="font-golos text-5xl font-light text-white leading-tight mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6" style={{ background: C.accent }}>
+              <Icon name="Wrench" size={12} style={{ color: "white" }} />
+              <p className="font-golos text-xs font-bold tracking-widest uppercase text-white">СЕРВИСНЫЙ ЦЕНТР · НИЖНИЙ ТАГИЛ</p>
+            </div>
+            <h1 className="font-golos text-5xl md:text-6xl font-bold text-white leading-tight mb-4">
               Профессиональный<br />
-              <span className="font-semibold text-5xl" style={{ color: "#7EC8FF" }}>ремонт техники</span>
+              <span style={{ color: "#5BB8FF" }}>ремонт техники</span>
             </h1>
-            <p className="text-blue-100 text-lg leading-relaxed mb-10 max-w-lg">
-              Ремонт телевизоров, ноутбуков, компьютеров и телефонов. Диагностика бесплатно. Гарантия на все виды работ.
+            <div className="w-16 h-1 mb-6" style={{ background: C.accent }} />
+            <p className="text-white text-lg leading-relaxed mb-10 max-w-lg" style={{ opacity: 0.85 }}>
+              Ремонт телевизоров, ноутбуков, компьютеров и телефонов.<br />
+              <span className="font-semibold text-white">Диагностика бесплатно.</span> Гарантия на все виды работ.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button onClick={() => scrollTo("#contacts")}
-                className="font-semibold px-8 py-4 text-sm tracking-wide text-white transition-colors"
+                className="font-bold px-8 py-4 text-sm tracking-widest uppercase text-white transition-all hover:opacity-90"
                 style={{ background: C.accent }}>
                 Записаться на ремонт
               </button>
               <button onClick={() => scrollTo("#services")}
-                className="border border-white/40 text-white font-medium px-8 py-4 text-sm tracking-wide hover:bg-white/10 transition-colors">
-                Все услуги
+                className="font-semibold text-white px-8 py-4 text-sm tracking-wide transition-all hover:bg-white/10"
+                style={{ border: "2px solid white" }}>
+                Все услуги →
               </button>
             </div>
           </div>
-          <div className="mt-16 grid grid-cols-3 gap-8 max-w-md">
-            {[{ val: "10+", label: "лет опыта" }, { val: "5 000+", label: "ремонтов" }, { val: "90 дней", label: "гарантия" }].map(s => (
-              <div key={s.label} className="text-white border-l pl-4" style={{ borderColor: "rgba(126,200,255,0.4)" }}>
-                <div className="font-golos text-3xl font-semibold" style={{ color: "#7EC8FF" }}>{s.val}</div>
-                <div className="text-xs text-blue-200 mt-1">{s.label}</div>
+          <div className="mt-16 grid grid-cols-3 gap-0 max-w-lg">
+            {[{ val: "10+", label: "лет опыта" }, { val: "5 000+", label: "ремонтов" }, { val: "90 дней", label: "гарантия" }].map((s, i) => (
+              <div key={s.label} className="px-6 py-4" style={{
+                borderLeft: i > 0 ? "1px solid rgba(91,184,255,0.3)" : "none",
+                background: "rgba(27,111,200,0.18)"
+              }}>
+                <div className="font-golos text-3xl font-bold" style={{ color: "#5BB8FF" }}>{s.val}</div>
+                <div className="text-xs text-white mt-1 uppercase tracking-wide" style={{ opacity: 0.7 }}>{s.label}</div>
               </div>
             ))}
           </div>
