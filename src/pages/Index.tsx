@@ -127,8 +127,8 @@ export default function Index() {
               href="tel:+79122997000"
               className="flex items-center gap-2 text-sm font-semibold px-4 py-2 transition-colors"
               style={{
-                backgroundColor: "#1B3A6B",
-                color: "white",
+                backgroundColor: "#F5C518",
+                color: "#0E0E0E",
               }}
             >
               <Icon name="Phone" size={15} />
@@ -160,7 +160,7 @@ export default function Index() {
             <a
               href="tel:+79122997000"
               className="flex items-center gap-2 text-sm font-semibold px-5 py-3"
-              style={{ backgroundColor: "#1B3A6B", color: "white" }}
+              style={{ backgroundColor: "#F5C518", color: "#0E0E0E" }}
             >
               <Icon name="Phone" size={15} />
               Позвонить
