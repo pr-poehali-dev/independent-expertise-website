@@ -196,6 +196,14 @@ export default function Index() {
               >
                 Узнать об услугах
               </button>
+              <a
+                href="tel:+79122997000"
+                className="sm:hidden flex items-center justify-center gap-2 text-sm font-semibold px-8 py-4"
+                style={{ backgroundColor: "#1B3A6B", color: "white" }}
+              >
+                <Icon name="Phone" size={15} />
+                Позвонить
+              </a>
             </div>
           </div>
           <div className="mt-16 grid grid-cols-3 gap-8 max-w-md">
@@ -331,6 +339,14 @@ export default function Index() {
                   </div>
                 ))}
               </div>
+              <a
+                href="tel:+79122997000"
+                className="md:hidden mt-8 flex items-center justify-center gap-2 text-sm font-semibold px-6 py-4 w-full"
+                style={{ backgroundColor: "#1B3A6B", color: "white" }}
+              >
+                <Icon name="Phone" size={16} />
+                Позвонить
+              </a>
             </div>
 
             <div className="p-8" style={{ background: "#2A2A2A" }}>
