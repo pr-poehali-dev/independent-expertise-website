@@ -111,6 +111,15 @@ export default function ServiceCenter() {
   const [sent, setSent] = useState(false);
 
   useEffect(() => {
+    document.title = 'Ремонт техники в Нижнем Тагиле — сервисный центр КУРСОР';
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', 'Профессиональный ремонт телевизоров, ноутбуков, компьютеров и телефонов в Нижнем Тагиле. Диагностика бесплатно. Гарантия от 30 до 90 дней.');
+    return () => {
+      document.title = 'Товароведческая экспертиза в Нижнем Тагиле | КУРСОР';
+    };
+  }, []);
+
+  useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll);
     window.scrollTo(0, 0);

@@ -4,18 +4,38 @@ import Icon from "@/components/ui/icon";
 
 const SEND_URL = "https://functions.poehali.dev/24927a74-8007-4a64-9304-0885c2072324";
 
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
 interface ServiceLayoutProps {
   title: string;
   subtitle: string;
+  description?: string;
   children: React.ReactNode;
   serviceLabel?: string;
+  faq?: FaqItem[];
 }
 
-export default function ServiceLayout({ title, subtitle, children, serviceLabel }: ServiceLayoutProps) {
+export default function ServiceLayout({ title, subtitle, description, children, serviceLabel, faq }: ServiceLayoutProps) {
   const [scrolled, setScrolled] = useState(false);
   const [form, setForm] = useState({ name: '', phone: '', service: serviceLabel || '', description: '' });
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+
+  useEffect(() => {
+    document.title = `${title} | КУРСОР — Нижний Тагил`;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && description) metaDesc.setAttribute('content', description);
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', `${title} | КУРСОР`);
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc && description) ogDesc.setAttribute('content', description);
+    return () => {
+      document.title = 'Товароведческая экспертиза в Нижнем Тагиле | КУРСОР';
+    };
+  }, [title, description]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -33,18 +53,32 @@ export default function ServiceLayout({ title, subtitle, children, serviceLabel 
     setForm({ name: '', phone: '', service: serviceLabel || '', description: '' });
   };
 
+  const faqSchema = faq && faq.length > 0 ? JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faq.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": { "@type": "Answer", "text": item.answer }
+    }))
+  }) : null;
+
   return (
     <div className="bg-stone-50 text-stone-900 font-golos min-h-screen">
+      {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: faqSchema }} />}
+
       {/* NAV */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-white/95 backdrop-blur-sm border-b border-stone-200 shadow-sm" : "bg-black/60 backdrop-blur-sm"}`}>
-        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link to="/" className="font-golos text-xl font-semibold text-white">КУРСОР</Link>
-          <Link to="/" className="flex items-center gap-2 text-sm text-stone-300 hover:text-white transition-colors">
-            <Icon name="ArrowLeft" size={16} />
-            На главную
-          </Link>
-        </div>
-      </nav>
+      <header>
+        <nav aria-label="Основная навигация" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-white/95 backdrop-blur-sm border-b border-stone-200 shadow-sm" : "bg-black/60 backdrop-blur-sm"}`}>
+          <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <Link to="/" className="font-golos text-xl font-semibold text-white">КУРСОР</Link>
+            <Link to="/" className="flex items-center gap-2 text-sm text-stone-300 hover:text-white transition-colors">
+              <Icon name="ArrowLeft" size={16} />
+              На главную
+            </Link>
+          </div>
+        </nav>
+      </header>
 
       {/* HERO */}
       <div className="bg-stone-950 pt-32 pb-16 px-6">
@@ -57,12 +91,14 @@ export default function ServiceLayout({ title, subtitle, children, serviceLabel 
       </div>
 
       {/* CONTENT */}
-      <div className="max-w-4xl mx-auto px-6 py-16">
-        {children}
-      </div>
+      <main>
+        <div className="max-w-4xl mx-auto px-6 py-16">
+          {children}
+        </div>
+      </main>
 
       {/* CTA */}
-      <section className="bg-stone-950 py-16 px-6">
+      <section aria-label="Форма заявки" className="bg-stone-950 py-16 px-6">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-start">
           <div>
             <h2 className="font-golos text-3xl font-light text-white mb-4">Оставить заявку</h2>
@@ -110,7 +146,7 @@ export default function ServiceLayout({ title, subtitle, children, serviceLabel 
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-black text-stone-500 py-8">
+      <footer role="contentinfo" className="bg-black text-stone-500 py-8">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="font-golos text-lg font-semibold text-stone-400">КУРСОР</div>
           <div className="text-xs tracking-wide">© 2026 Все права защищены</div>

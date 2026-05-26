@@ -73,6 +73,10 @@ export default function Index() {
   };
 
   useEffect(() => {
+    document.title = 'Товароведческая экспертиза в Нижнем Тагиле | КУРСОР';
+  }, []);
+
+  useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
