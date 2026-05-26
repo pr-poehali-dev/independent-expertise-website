@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://kursornt.ru/sitemap.xml
+Sitemap: https://kursor-expert.ru/sitemap.xml
