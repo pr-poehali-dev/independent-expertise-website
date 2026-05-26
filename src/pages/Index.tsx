@@ -165,6 +165,7 @@ export default function Index() {
               <Icon name="Phone" size={15} />
               Позвонить
             </a>
+
           </div>
         )}
       </nav>
@@ -342,7 +343,7 @@ export default function Index() {
               <a
                 href="tel:+79122997000"
                 className="md:hidden mt-8 flex items-center justify-center gap-2 text-sm font-semibold px-6 py-4 w-full"
-                style={{ backgroundColor: "#1B3A6B", color: "white" }}
+                style={{ backgroundColor: "#F5C518", color: "#0E0E0E" }}
               >
                 <Icon name="Phone" size={16} />
                 Позвонить
