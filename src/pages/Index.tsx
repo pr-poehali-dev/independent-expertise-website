@@ -123,6 +123,17 @@ export default function Index() {
             >
               Сервисный центр
             </Link>
+            <a
+              href="tel:+79122997000"
+              className="flex items-center gap-2 text-sm font-semibold px-4 py-2 transition-colors"
+              style={{
+                backgroundColor: "#1B3A6B",
+                color: "white",
+              }}
+            >
+              <Icon name="Phone" size={15} />
+              Позвонить
+            </a>
 
           </div>
           <button
@@ -146,6 +157,14 @@ export default function Index() {
             <button onClick={() => scrollTo("#contacts")} className="bg-stone-900 text-stone-50 text-sm font-medium px-5 py-3 text-left">
               Получить заключение
             </button>
+            <a
+              href="tel:+79122997000"
+              className="flex items-center gap-2 text-sm font-semibold px-5 py-3"
+              style={{ backgroundColor: "#1B3A6B", color: "white" }}
+            >
+              <Icon name="Phone" size={15} />
+              Позвонить
+            </a>
           </div>
         )}
       </nav>
