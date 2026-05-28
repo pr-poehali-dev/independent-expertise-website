@@ -60,6 +60,7 @@ export default function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showPhone, setShowPhone] = useState(false);
+  const [showHeroPhone, setShowHeroPhone] = useState(false);
   const [form, setForm] = useState({ name: '', phone: '', service: '', description: '' });
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
@@ -193,9 +194,28 @@ export default function Index() {
             <p className="text-stone-300 text-lg leading-relaxed mb-10 max-w-lg">Судебные экспертизы. 
 Официальное заключение для возврата бракованного телефона, ноутбука или бытовой техники на Ozon и Wildberries. Оценка стоимости.</p>
             <div className="flex flex-col sm:flex-row gap-4">
+              {showHeroPhone ? (
+                <a
+                  href="tel:+79122997000"
+                  className="flex items-center justify-center gap-2 font-semibold px-8 py-4 text-sm tracking-wide transition-all"
+                  style={{ background: "#F5C518", color: "#0E0E0E" }}
+                >
+                  <Icon name="Phone" size={15} />
+                  +7 912-299-70-00
+                </a>
+              ) : (
+                <button
+                  onClick={() => setShowHeroPhone(true)}
+                  className="hidden sm:flex items-center justify-center gap-2 font-semibold px-8 py-4 text-sm tracking-wide transition-colors"
+                  style={{ background: "#F5C518", color: "#0E0E0E" }}
+                >
+                  <Icon name="Phone" size={15} />
+                  Позвонить
+                </button>
+              )}
               <button
                 onClick={() => scrollTo("#contacts")}
-                className="font-semibold px-8 py-4 text-sm tracking-wide transition-colors"
+                className="sm:hidden font-semibold px-8 py-4 text-sm tracking-wide transition-colors"
                 style={{ background: "#F5C518", color: "#0E0E0E" }}
               >
                 Получить заключение
