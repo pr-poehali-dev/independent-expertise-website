@@ -237,7 +237,7 @@ export default function Index() {
             </div>
           </div>
           <div className="mt-16 grid grid-cols-3 gap-8 max-w-md">
-            {[{ val: "10+", label: "лет опыта" }, { val: "2 500+", label: "экспертиз" }, { val: "97%", label: "успешных возвратов" }].map((s) => (
+            {[{ val: "10+", label: "лет опыта" }, { val: "100+", label: "экспертиз" }, { val: "97%", label: "успешных возвратов" }].map((s) => (
               <div key={s.label} className="text-white border-l pl-4" style={{ borderColor: "rgba(245,197,24,0.4)" }}>
                 <div className="font-golos text-3xl font-semibold" style={{ color: "#F5C518" }}>{s.val}</div>
                 <div className="text-xs text-stone-400 mt-1">{s.label}</div>
