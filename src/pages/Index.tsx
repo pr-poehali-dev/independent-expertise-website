@@ -411,22 +411,7 @@ export default function Index() {
                     style={{ background: "#3A3A3A", borderColor: "#5A5A5A" }}
                   />
                 </div>
-                <div>
-                  <label className="text-xs text-stone-400 tracking-widest uppercase block mb-2">Вид экспертизы</label>
-                  <select
-                    value={form.service}
-                    onChange={e => setForm(f => ({ ...f, service: e.target.value }))}
-                    className="w-full border text-stone-300 px-4 py-3 text-sm focus:outline-none transition-colors appearance-none"
-                    style={{ background: "#3A3A3A", borderColor: "#5A5A5A" }}
-                  >
-                    <option value="">Выберите тип техники</option>
-                    <option>Смартфон / планшет</option>
-                    <option>Ноутбук / компьютер</option>
-                    <option>Телевизор</option>
-                    <option>Холодильник / стиральная машина</option>
-                    <option>Другая бытовая техника</option>
-                  </select>
-                </div>
+
                 <div>
                   <label className="text-xs text-stone-400 tracking-widest uppercase block mb-2">Описание задачи</label>
                   <textarea
