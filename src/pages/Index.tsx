@@ -179,7 +179,7 @@ export default function Index() {
             <p className="font-golos text-sm font-semibold tracking-widest uppercase mb-4" style={{ color: "#F5C518" }}>НЕЗАВИСИМАЯ ТОВАРОВЕДЧЕСКАЯ ЭКСПЕРТИЗА В НИЖНЕМ ТАГИЛЕ</p>
             <h1 className="font-golos text-5xl font-light text-white leading-tight mb-6">
               Техника сломалась —<br />
-              <span className="font-semibold text-5xl" style={{ color: "#F5C518" }}>верните деньги</span>
+              <span className="font-semibold text-5xl" style={{ color: "#F5C518" }}>верните свои деньги</span>
             </h1>
             <p className="text-stone-300 text-lg leading-relaxed mb-10 max-w-lg">Судебные экспертизы. 
 Официальное заключение для возврата бракованного телефона, ноутбука или бытовой техники на Ozon и Wildberries. Оценка стоимости.</p>
