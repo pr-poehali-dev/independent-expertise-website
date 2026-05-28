@@ -442,7 +442,7 @@ export default function Index() {
 
               <div className="overflow-hidden" style={{ height: 280 }}>
                 <iframe
-                  src="https://yandex.ru/map-widget/v1/?um=constructor%3A&source=constructor&z=16&ll=59.9695%2C57.9187&l=map&pt=59.9695%2C57.9187,pm2rdm&text=%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9+%D0%A2%D0%B0%D0%B3%D0%B8%D0%BB%2C+%D1%83%D0%BB.+%D0%9E%D1%80%D0%B4%D0%B6%D0%BE%D0%BD%D0%B8%D0%BA%D0%B8%D0%B4%D0%B7%D0%B5%2C+31&uri=ymapsbm1%3A%2F%2Forg%3Foid%3D1694629497"
+                  src="https://yandex.ru/map-widget/v1/?um=constructor%3A32f0549893b872bfaea6aa470b53050a73a9f5ea11e73d5e42b2bbb87690c188&lang=ru_RU&scroll=true"
                   width="100%"
                   height="280"
                   frameBorder="0"
