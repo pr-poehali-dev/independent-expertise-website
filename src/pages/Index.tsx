@@ -59,6 +59,7 @@ const prices = [
 export default function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showPhone, setShowPhone] = useState(false);
   const [form, setForm] = useState({ name: '', phone: '', service: '', description: '' });
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
@@ -123,17 +124,25 @@ export default function Index() {
             >
               Сервисный центр
             </Link>
-            <button
-              onClick={() => scrollTo("#contacts")}
-              className="flex items-center gap-2 text-sm font-semibold px-4 py-2 transition-colors"
-              style={{
-                backgroundColor: "#F5C518",
-                color: "#0E0E0E",
-              }}
-            >
-              <Icon name="Phone" size={15} />
-              Позвонить
-            </button>
+            {showPhone ? (
+              <a
+                href="tel:+79122997000"
+                className="flex items-center gap-2 text-sm font-semibold px-4 py-2 transition-all"
+                style={{ backgroundColor: "#F5C518", color: "#0E0E0E" }}
+              >
+                <Icon name="Phone" size={15} />
+                +7 912-299-70-00
+              </a>
+            ) : (
+              <button
+                onClick={() => setShowPhone(true)}
+                className="flex items-center gap-2 text-sm font-semibold px-4 py-2 transition-colors"
+                style={{ backgroundColor: "#F5C518", color: "#0E0E0E" }}
+              >
+                <Icon name="Phone" size={15} />
+                Позвонить
+              </button>
+            )}
 
           </div>
           <button
