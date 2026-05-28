@@ -379,63 +379,77 @@ export default function Index() {
               </a>
             </div>
 
-            <div className="p-8" style={{ background: "#2A2A2A" }}>
-              <h3 className="font-golos text-2xl font-semibold mb-6">Заявка на заключение</h3>
-              {sent ? (
-                <div className="text-center py-10">
-                  <Icon name="CheckCircle" size={48} style={{ color: "#F5C518", margin: "0 auto 16px" }} />
-                  <p className="text-white text-lg font-semibold mb-2">Заявка отправлена!</p>
-                  <p className="text-stone-400 text-sm">Перезвоним в течение 2 часов</p>
-                </div>
-              ) : (
-              <div className="space-y-4">
-                <div>
-                  <label className="text-xs text-stone-400 tracking-widest uppercase block mb-2">Имя</label>
-                  <input
-                    type="text"
-                    placeholder="Иван Иванов"
-                    value={form.name}
-                    onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
-                    className="w-full border text-white placeholder-stone-500 px-4 py-3 text-sm focus:outline-none transition-colors"
-                    style={{ background: "#3A3A3A", borderColor: "#5A5A5A" }}
-                  />
-                </div>
-                <div>
-                  <label className="text-xs text-stone-400 tracking-widest uppercase block mb-2">Телефон</label>
-                  <input
-                    type="tel"
-                    placeholder="+7 (___) ___-__-__"
-                    value={form.phone}
-                    onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
-                    className="w-full border text-white placeholder-stone-500 px-4 py-3 text-sm focus:outline-none transition-colors"
-                    style={{ background: "#3A3A3A", borderColor: "#5A5A5A" }}
-                  />
-                </div>
-
-                <div>
-                  <label className="text-xs text-stone-400 tracking-widest uppercase block mb-2">Описание задачи</label>
-                  <textarea
-                    placeholder="Опишите проблему: что сломалось, где покупали, маркетплейс..."
-                    rows={3}
-                    value={form.description}
-                    onChange={e => setForm(f => ({ ...f, description: e.target.value }))}
-                    className="w-full border text-white placeholder-stone-500 px-4 py-3 text-sm focus:outline-none transition-colors resize-none"
-                    style={{ background: "#3A3A3A", borderColor: "#5A5A5A" }}
-                  />
-                </div>
-                <button
-                  onClick={handleSubmit}
-                  disabled={sending || !form.name || !form.phone}
-                  className="w-full font-semibold py-4 text-sm tracking-wide transition-colors mt-2 disabled:opacity-50"
-                  style={{ background: "#F5C518", color: "#0E0E0E" }}
-                >
-                  {sending ? "Отправляем..." : "Отправить заявку"}
-                </button>
-                <p className="text-xs text-stone-600 text-center leading-relaxed">
-                  Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных
-                </p>
+            <div className="flex flex-col gap-4">
+              <div className="p-6" style={{ background: "#2A2A2A" }}>
+                <h3 className="font-golos text-xl font-semibold mb-4">Заявка на заключение</h3>
+                {sent ? (
+                  <div className="text-center py-6">
+                    <Icon name="CheckCircle" size={40} style={{ color: "#F5C518", margin: "0 auto 12px" }} />
+                    <p className="text-white text-base font-semibold mb-1">Заявка отправлена!</p>
+                    <p className="text-stone-400 text-sm">Перезвоним в течение 2 часов</p>
+                  </div>
+                ) : (
+                  <div className="space-y-3">
+                    <div className="grid grid-cols-2 gap-3">
+                      <div>
+                        <label className="text-xs text-stone-400 tracking-widest uppercase block mb-1">Имя</label>
+                        <input
+                          type="text"
+                          placeholder="Иван Иванов"
+                          value={form.name}
+                          onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
+                          className="w-full border text-white placeholder-stone-500 px-3 py-2 text-sm focus:outline-none transition-colors"
+                          style={{ background: "#3A3A3A", borderColor: "#5A5A5A" }}
+                        />
+                      </div>
+                      <div>
+                        <label className="text-xs text-stone-400 tracking-widest uppercase block mb-1">Телефон</label>
+                        <input
+                          type="tel"
+                          placeholder="+7 (___) ___-__-__"
+                          value={form.phone}
+                          onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
+                          className="w-full border text-white placeholder-stone-500 px-3 py-2 text-sm focus:outline-none transition-colors"
+                          style={{ background: "#3A3A3A", borderColor: "#5A5A5A" }}
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <label className="text-xs text-stone-400 tracking-widest uppercase block mb-1">Описание задачи</label>
+                      <textarea
+                        placeholder="Опишите проблему: что сломалось, где покупали, маркетплейс..."
+                        rows={2}
+                        value={form.description}
+                        onChange={e => setForm(f => ({ ...f, description: e.target.value }))}
+                        className="w-full border text-white placeholder-stone-500 px-3 py-2 text-sm focus:outline-none transition-colors resize-none"
+                        style={{ background: "#3A3A3A", borderColor: "#5A5A5A" }}
+                      />
+                    </div>
+                    <button
+                      onClick={handleSubmit}
+                      disabled={sending || !form.name || !form.phone}
+                      className="w-full font-semibold py-3 text-sm tracking-wide transition-colors disabled:opacity-50"
+                      style={{ background: "#F5C518", color: "#0E0E0E" }}
+                    >
+                      {sending ? "Отправляем..." : "Отправить заявку"}
+                    </button>
+                    <p className="text-xs text-stone-600 text-center">
+                      Нажимая кнопку, вы соглашаетесь с политикой обработки персональных данных
+                    </p>
+                  </div>
+                )}
               </div>
-              )}
+
+              <div className="overflow-hidden" style={{ height: 280 }}>
+                <iframe
+                  src="https://yandex.ru/map-widget/v1/?ll=59.969500%2C57.918700&z=16&pt=59.969500%2C57.918700,pm2rdm&text=%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9+%D0%A2%D0%B0%D0%B3%D0%B8%D0%BB%2C+%D1%83%D0%BB.+%D0%9E%D1%80%D0%B4%D0%B6%D0%BE%D0%BD%D0%B8%D0%BA%D0%B8%D0%B4%D0%B7%D0%B5%2C+31"
+                  width="100%"
+                  height="280"
+                  frameBorder="0"
+                  allowFullScreen
+                  style={{ display: "block" }}
+                />
+              </div>
             </div>
           </div>
         </div>
